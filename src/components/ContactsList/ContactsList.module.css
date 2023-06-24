@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.listItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.listBtn {
+  padding: 7px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px 0px #888888;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: maroon;
+  color: #fff;
+}
