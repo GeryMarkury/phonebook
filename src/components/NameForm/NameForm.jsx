@@ -2,16 +2,16 @@ import { useState } from 'react';
 import css from './NameForm.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
-import { nanoid } from '@reduxjs/toolkit';
+import { selectAllContacts } from 'redux/selectors';
 
 
 export default function NameForm() {
-    const contacts = useSelector(state => state.contacts.items);
+    const contacts = useSelector(selectAllContacts);
 
     const dispatch = useDispatch();
 
     const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
+    const [number, setNumber] = useState('');
 
 
     const handleOnClick = () => {
@@ -24,11 +24,10 @@ export default function NameForm() {
         }
         dispatch(addContact({
             name,
-            phone,
-            id: nanoid(),
+            number,
         }));
         setName('');
-        setPhone('');
+        setNumber('');
     };
 
         return (
@@ -45,8 +44,8 @@ export default function NameForm() {
                 <label>Number: <input
                     type="tel"
                     name="number"
-                    value={phone}
-                    onChange={event => setPhone(event.currentTarget.value)}
+                    value={number}
+                    onChange={event => setNumber(event.currentTarget.value)}
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required
