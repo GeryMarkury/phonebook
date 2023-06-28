@@ -3,6 +3,10 @@ import { ButtonStyles as Button } from "./components/ButtonStyles";
 import { NavLinkStyles as NavLink } from "./components/NavLinkStyles";
 
 export const theme = extendTheme({
+    fonts: {
+    heading: "Lusitana",
+    body: "Lusitana",
+  },
     styles: {
         global: {
             'html, body': {

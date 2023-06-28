@@ -5,10 +5,9 @@ export const ButtonStyles = defineStyleConfig({
         primary: {
             bg: 'red',
             color: 'white',
-            transition: 'all 200ms ease',
+               borderRadius: '50px',
             _hover: {
                 boxShadow: 'md',
-                transform: 'scale(1.02)',
             }
         },
     },

@@ -1,9 +1,11 @@
+import { Heading } from "@chakra-ui/react";
+
 export default function Home() {
   return (
     <div>
-      <h1>
-        Phonebook welcome page!
-      </h1>
+      <Heading>
+        Welcome to PhoneBook
+      </Heading>
     </div>
   );
 };
