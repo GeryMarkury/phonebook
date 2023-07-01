@@ -1,8 +1,9 @@
 import { Filter } from './Filter/Filter';
-import css from './ContactsList.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'redux/operations';
 import { selectAllContacts, selectFilter } from 'redux/selectors';
+import { Button, ListItem, UnorderedList } from '@chakra-ui/react';
+import css from './ContactsList.module.css';
 
 export function ContactsList() {
   
@@ -18,14 +19,14 @@ const contacts = useSelector(selectAllContacts);
   return (
     <div>
       <Filter />
-      {visibleContacts.length > 0 ? (<ul className={css.list}>
+      {visibleContacts.length > 0 ? (<UnorderedList spacing='10px'>
         {visibleContacts.map(({ id, name, number }) => (
-          <li key={id} className={css.listItem}>
-            {name}: {number}
-            <button type="button" onClick={()=>dispatch(deleteContact(id))} className={css.listBtn}>Delete</button>
-          </li>
+          <ListItem key={id}>
+            <div className={css.listItem}><div>{name}: {number}</div>
+            <Button variant={'primary'} size={'xs'} type="button" onClick={()=>dispatch(deleteContact(id))}>Delete</Button></div>
+          </ListItem>
         ))}
-      </ul>) : (<p>There are no contacts to display.</p>)}
+      </UnorderedList>) : (<p>There are no contacts to display.</p>)}
     </div>
   )
 };

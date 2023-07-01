@@ -1,15 +1,23 @@
 import { NavLink } from 'react-router-dom';
-import css from './AuthNav.module.css';
+import { Box, useStyleConfig } from '@chakra-ui/react';
 
 export const AuthNav = () => {
+
+  const StyledNavLink = (props) => {
+const { baseStyle, ...rest } = props
+const styles = useStyleConfig('NavLink', baseStyle);
+
+  return <Box as={NavLink} sx={styles} {...rest} />;
+  };
+  
   return (
     <div>
-      <NavLink className={css.link} to="/register">
+      <StyledNavLink to="/register">
         Register
-      </NavLink>
-      <NavLink className={css.link} to="/login">
+      </StyledNavLink>
+      <StyledNavLink to="/login">
         Log In
-      </NavLink>
+      </StyledNavLink>
     </div>
   );
 };
