@@ -1,6 +1,8 @@
 import { extendTheme } from "@chakra-ui/react";
 import { ButtonStyles as Button } from "./components/ButtonStyles";
 import { NavLinkStyles as NavLink } from "./components/NavLinkStyles";
+import { HeadingStyles as Heading } from "./components/Heading";
+import { inputTheme as Input } from "./components/InputStyles";
 
 export const theme = extendTheme({
     fonts: {
@@ -27,5 +29,7 @@ export const theme = extendTheme({
     components: {
         Button,
         NavLink,
+        Heading,
+        Input,
     },
 });
