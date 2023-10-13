@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/phonebook/static/css/main.05098fe4.css",
-    "main.js": "/phonebook/static/js/main.f4f81063.js",
+    "main.js": "/phonebook/static/js/main.1060ed5d.js",
     "static/media/annie-spratt-goholCAVTRs-unsplash.jpg": "/phonebook/static/media/annie-spratt-goholCAVTRs-unsplash.dc93dac6e5ed9ced1f9f.jpg",
     "index.html": "/phonebook/index.html",
     "main.05098fe4.css.map": "/phonebook/static/css/main.05098fe4.css.map",
-    "main.f4f81063.js.map": "/phonebook/static/js/main.f4f81063.js.map"
+    "main.1060ed5d.js.map": "/phonebook/static/js/main.1060ed5d.js.map"
   },
   "entrypoints": [
     "static/css/main.05098fe4.css",
-    "static/js/main.f4f81063.js"
+    "static/js/main.1060ed5d.js"
   ]
 }
