@@ -25,9 +25,9 @@ export const RegisterForm = () => {
       <FormLabel>Username: </FormLabel>
       <Input variant="nameForm" type="text" name="name"></Input>
       <FormLabel>Email: </FormLabel>
-      <Input variant="nameForm" type="email" name="email"></Input>
+      <Input variant="nameForm" type="email" name="email" placeholder="example@mail.com" _placeholder={{ opacity: 0.6, color: '#F0ECD3' }}></Input>
       <FormLabel>Password: </FormLabel>
-      <Input variant="nameForm" type="password" name="password" placeholder="Minimum 7 symbols"></Input>
+      <Input variant="nameForm" type="password" name="password" placeholder="Minimum 7 symbols" _placeholder={{ opacity: 0.6, color: '#F0ECD3' }}></Input>
         <Button w='130px' variant={'primary'} size={'md'} type="submit">Register</Button></div>
       </FormControl>
       </form>
